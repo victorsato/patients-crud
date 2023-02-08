@@ -35,6 +35,15 @@ $routes->get('login/callback', 'Login::callback', ['as' => 'login.callback']);
 $routes->get('login/auth', 'Login::auth', ['as' => 'login.auth']);
 $routes->get('login/logout', 'Login::logout', ['as' => 'login.logout']);
 
+$routes->group('patients', ['filter' => 'auth'], static function ($routes) {
+    $routes->get('/', 'Patient::index', ['as' => 'patient']);
+    $routes->get('create', 'Patient::create', ['as' => 'patient.create']);
+    $routes->post('store', 'Patient::store', ['as' => 'patient.store']);
+    $routes->get('edit/(:num)', 'Patient::edit/$1', ['as' => 'patient.edit']);
+    $routes->post('update/(:num)', 'Patient::update/$1', ['as' => 'patient.update']);
+    $routes->get('delete/(:num)', 'Patient::delete/$1', ['as' => 'patient.delete']);
+});
+
 $routes->get('migrate', 'Migrate::index');
 
 /*
