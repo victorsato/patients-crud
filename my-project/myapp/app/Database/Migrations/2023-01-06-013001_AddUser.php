@@ -3,6 +3,7 @@
 namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
+use CodeIgniter\Database\RawSql;
 
 class AddUser extends Migration
 {
@@ -30,6 +31,7 @@ class AddUser extends Migration
             'email' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '50',
+                'null' => true,
             ],
             'location' => [
                 'type'       => 'VARCHAR',
@@ -41,8 +43,14 @@ class AddUser extends Migration
                 'constraint' => '255',
                 'null' => true,
             ],
+            'link' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+                'null' => true,
+            ],
             'created_at' => [
                 'type'       => 'TIMESTAMP',
+                'default' => new RawSql('CURRENT_TIMESTAMP'),
                 'null' => true,
             ],
             'updated_at' => [

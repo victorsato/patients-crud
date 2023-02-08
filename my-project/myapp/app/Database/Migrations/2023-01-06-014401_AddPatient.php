@@ -3,6 +3,7 @@
 namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
+use CodeIgniter\Database\RawSql;
 
 class AddPatient extends Migration
 {
@@ -29,6 +30,7 @@ class AddPatient extends Migration
             ],
             'created_at' => [
                 'type'       => 'TIMESTAMP',
+                'default' => new RawSql('CURRENT_TIMESTAMP'),
                 'null' => true,
             ],
             'updated_at' => [
