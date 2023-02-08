@@ -1396,3 +1396,228 @@ Stack trace:
 #8 /usr/src/myapp/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
 #9 /usr/src/myapp/spark(97): CodeIgniter\CLI\Console->run()
 #10 {main}
+ERROR - 2023-02-08 19:57:17 --> mysqli_sql_exception: Table 'bitnami_myapp.ci_sessions' doesn't exist in /app/myapp/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /app/myapp/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /app/myapp/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /app/myapp/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /app/myapp/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query()
+#4 /app/myapp/system/Session/Handlers/DatabaseHandler.php(144): CodeIgniter\Database\BaseBuilder->get()
+#5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read()
+#6 /app/myapp/system/Session/Session.php(928): session_start()
+#7 /app/myapp/system/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+#8 /app/myapp/system/Config/Services.php(674): CodeIgniter\Session\Session->start()
+#9 /app/myapp/system/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+#10 /app/myapp/system/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+#11 /app/myapp/system/Config/Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance()
+#12 /app/myapp/system/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+#13 /app/myapp/app/Controllers/BaseController.php(59): CodeIgniter\Config\BaseService::__callStatic()
+#14 /app/myapp/system/CodeIgniter.php(907): App\Controllers\BaseController->initController()
+#15 /app/myapp/system/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#16 /app/myapp/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#17 /app/myapp/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#18 {main}
+CRITICAL - 2023-02-08 19:57:17 --> Table 'bitnami_myapp.ci_sessions' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Session/Handlers/DatabaseHandler.php(144): CodeIgniter\Database\BaseBuilder->get()
+ 3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read()
+ 4 SYSTEMPATH/Session/Session.php(928): session_start()
+ 5 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH/Config/Services.php(674): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/Config/Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance()
+10 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+11 APPPATH/Controllers/BaseController.php(59): CodeIgniter\Config\BaseService::__callStatic()
+12 SYSTEMPATH/CodeIgniter.php(907): App\Controllers\BaseController->initController()
+13 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 19:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 19:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 19:58:37 --> The route for "patient" cannot be found.
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
+ 1 SYSTEMPATH/HTTP/RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+ 2 APPPATH/Controllers/Login.php(54): CodeIgniter\HTTP\RedirectResponse->route()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 20:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 20:11:30 --> Class "App\Models\UserModel" not found
+in APPPATH/Controllers/Login.php on line 47.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 20:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+ERROR - 2023-02-08 20:11:56 --> mysqli_sql_exception: Column 'email' cannot be null in /app/myapp/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /app/myapp/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /app/myapp/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /app/myapp/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /app/myapp/system/Database/BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query()
+#4 /app/myapp/system/Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 /app/myapp/system/BaseModel.php(782): CodeIgniter\Model->doInsert()
+#6 /app/myapp/system/Model.php(729): CodeIgniter\BaseModel->insert()
+#7 /app/myapp/app/Controllers/Login.php(56): CodeIgniter\Model->insert()
+#8 /app/myapp/system/CodeIgniter.php(934): App\Controllers\Login->auth()
+#9 /app/myapp/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#10 /app/myapp/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#11 /app/myapp/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-02-08 20:11:56 --> Column 'email' cannot be null
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert()
+ 4 SYSTEMPATH/Model.php(729): CodeIgniter\BaseModel->insert()
+ 5 APPPATH/Controllers/Login.php(56): CodeIgniter\Model->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 20:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 20:13:26 --> The route for "patient" cannot be found.
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
+ 1 SYSTEMPATH/HTTP/RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+ 2 APPPATH/Controllers/Login.php(65): CodeIgniter\HTTP\RedirectResponse->route()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 20:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 20:15:48 --> The route for "patient" cannot be found.
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
+ 1 SYSTEMPATH/HTTP/RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+ 2 APPPATH/Controllers/Login.php(65): CodeIgniter\HTTP\RedirectResponse->route()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 20:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 20:17:08 --> Call to undefined function App\Controllers\now()
+in APPPATH/Controllers/Login.php on line 22.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->index()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 20:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 20:20:26 --> The route for "patient" cannot be found.
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
+ 1 SYSTEMPATH/HTTP/RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+ 2 APPPATH/Controllers/Login.php(66): CodeIgniter\HTTP\RedirectResponse->route()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 20:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 20:21:19 --> The route for "patient" cannot be found.
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
+ 1 SYSTEMPATH/HTTP/RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+ 2 APPPATH/Controllers/Login.php(65): CodeIgniter\HTTP\RedirectResponse->route()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 20:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:23:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:23:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 20:29:12 --> The route for "patient" cannot be found.
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
+ 1 SYSTEMPATH/HTTP/RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+ 2 APPPATH/Controllers/Login.php(74): CodeIgniter\HTTP\RedirectResponse->route()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 20:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 20:29:34 --> The route for "patient" cannot be found.
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
+ 1 SYSTEMPATH/HTTP/RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+ 2 APPPATH/Controllers/Login.php(74): CodeIgniter\HTTP\RedirectResponse->route()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 20:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:29:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 20:29:53 --> The route for "patient" cannot be found.
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
+ 1 SYSTEMPATH/HTTP/RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+ 2 APPPATH/Controllers/Login.php(74): CodeIgniter\HTTP\RedirectResponse->route()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 20:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 20:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 20:31:45 --> The route for "patient" cannot be found.
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
+ 1 SYSTEMPATH/HTTP/RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+ 2 APPPATH/Controllers/Login.php(74): CodeIgniter\HTTP\RedirectResponse->route()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 17:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 17:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 17:32:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 17:32:57 --> The route for "patient" cannot be found.
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
+ 1 SYSTEMPATH/HTTP/RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+ 2 APPPATH/Controllers/Login.php(74): CodeIgniter\HTTP\RedirectResponse->route()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

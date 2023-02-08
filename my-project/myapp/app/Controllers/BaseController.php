@@ -9,6 +9,8 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
+use App\Libraries\Twig;
+
 /**
  * Class BaseController
  *
@@ -52,7 +54,8 @@ abstract class BaseController extends Controller
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
-
-        // E.g.: $this->session = \Config\Services::session();
+        $this->twig = new Twig(APPPATH.'/Views');
+        $this->request = \Config\Services::request();
+        $this->session = \Config\Services::session();
     }
 }
