@@ -1621,3 +1621,69 @@ in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
  4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
  5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
  6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-02-08 18:03:36 --> mysqli_sql_exception: Table 'bitnami_myapp.ci_sessions' doesn't exist in /app/myapp/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /app/myapp/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /app/myapp/system/Database/BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /app/myapp/system/Database/BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /app/myapp/system/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query()
+#4 /app/myapp/system/Session/Handlers/DatabaseHandler.php(144): CodeIgniter\Database\BaseBuilder->get()
+#5 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read()
+#6 /app/myapp/system/Session/Session.php(928): session_start()
+#7 /app/myapp/system/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+#8 /app/myapp/system/Config/Services.php(674): CodeIgniter\Session\Session->start()
+#9 /app/myapp/system/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+#10 /app/myapp/system/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+#11 /app/myapp/system/Config/Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance()
+#12 /app/myapp/system/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+#13 /app/myapp/app/Controllers/BaseController.php(59): CodeIgniter\Config\BaseService::__callStatic()
+#14 /app/myapp/system/CodeIgniter.php(907): App\Controllers\BaseController->initController()
+#15 /app/myapp/system/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#16 /app/myapp/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#17 /app/myapp/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#18 {main}
+CRITICAL - 2023-02-08 18:03:36 --> Table 'bitnami_myapp.ci_sessions' doesn't exist
+in SYSTEMPATH/Database/BaseConnection.php on line 645.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Session/Handlers/DatabaseHandler.php(144): CodeIgniter\Database\BaseBuilder->get()
+ 3 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read()
+ 4 SYSTEMPATH/Session/Session.php(928): session_start()
+ 5 SYSTEMPATH/Session/Session.php(250): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH/Config/Services.php(674): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/Config/Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance()
+10 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::session()
+11 APPPATH/Controllers/BaseController.php(59): CodeIgniter\Config\BaseService::__callStatic()
+12 SYSTEMPATH/CodeIgniter.php(907): App\Controllers\BaseController->initController()
+13 SYSTEMPATH/CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+14 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+15 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 18:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+CRITICAL - 2023-02-08 18:04:25 --> The route for "patient" cannot be found.
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 60.
+ 1 SYSTEMPATH/HTTP/RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+ 2 APPPATH/Controllers/Login.php(86): CodeIgniter\HTTP\RedirectResponse->route()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Login->auth()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-08 18:04:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2023-02-08 18:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
